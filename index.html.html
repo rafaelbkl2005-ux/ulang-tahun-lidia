@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8dce7">
+<title>Untuk Lidia Theresia Siregar ♡</title>
+<style>
+:root{--rose:#c65d83;--deep:#8f3e61;--ink:#633d4d;--cream:#fff9fb;--pink:#f8dce7;--line:#f0c8d7}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at 15% 10%,#fff 0,transparent 30%),linear-gradient(145deg,#fff7fa,#f8dce7 55%,#fbeef3);overflow-x:hidden}
+button,input{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
+#petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.petal{position:absolute;top:-40px;opacity:.7;animation:fall linear forwards;filter:drop-shadow(0 3px 4px #bd6d8a33)}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(520deg);opacity:.05}}
+.wrap{position:relative;z-index:1;width:min(920px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;color:#94516c;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.brand{font-weight:bold}.nav-heart{font-size:20px}
+.hero{min-height:82vh;display:grid;place-items:center;text-align:center;padding:55px 18px 70px}
+.eyebrow{letter-spacing:.28em;text-transform:uppercase;font:11px Arial,sans-serif;color:#b66b87}
+.hero h1{font-size:clamp(43px,9vw,82px);line-height:1.03;font-weight:normal;margin:22px 0 14px;color:var(--deep)}
+.hero h1 em{font-weight:normal;color:#d77e9d}
+.hero p{font-size:clamp(15px,2.5vw,18px);line-height:1.9;max-width:570px;margin:0 auto;color:#80576a}
+.heart-mark{font-size:37px;display:inline-block;animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.18)}}
+.btn{border:0;border-radius:999px;padding:14px 23px;background:linear-gradient(135deg,#d9799c,#b94e79);color:white;box-shadow:0 9px 24px #bd638344;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 13px 28px #bd638355}
+.btn.secondary{background:#fff;color:var(--deep);border:1px solid var(--line);box-shadow:none}
+.hero .btn{margin-top:28px}
+section{padding:48px 0}
+.section-head{text-align:center;margin-bottom:28px}
+.section-head .eyebrow{margin-bottom:12px}
+h2{font-weight:normal;color:var(--deep);font-size:clamp(29px,5vw,42px);margin:0 0 10px}
+.section-head p{font-size:15px;line-height:1.7;color:#906779;margin:0}
+.paper{background:#fffdfd;border:1px solid #fff;box-shadow:0 18px 55px #a95d7920;border-radius:26px;padding:clamp(23px,5vw,48px);position:relative;overflow:hidden}
+.paper:before{content:"";position:absolute;inset:10px;border:1px solid #f4dce5;border-radius:19px;pointer-events:none}
+.letter-top{text-align:center;font-size:25px;color:#d17b99;margin-bottom:20px}
+.letter-body{max-width:660px;margin:auto;font-size:17px;line-height:2.05;white-space:pre-line;position:relative}
+.letter-body strong{color:var(--deep)}
+.signature{text-align:right;margin:24px 8px 0;color:#b95e80;font-style:italic;font-size:20px}
+.reveal{display:none;animation:rise .8s ease both}
+.reveal.show{display:block}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.letter-actions{text-align:center;margin-top:25px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.photo-card{border-radius:19px;overflow:hidden;background:#fff;border:1px solid #fff;box-shadow:0 10px 28px #a95d791c;min-height:185px;position:relative}
+.photo-card img{width:100%;height:230px;object-fit:cover;display:block}
+.photo-card .placeholder{height:230px;display:grid;place-items:center;text-align:center;padding:12px;background:linear-gradient(145deg,#fff7fa,#f3cbd9);color:#a35a77;font-size:14px;line-height:1.7}
+.photo-card small{display:block;text-align:center;padding:12px;color:#966278;font-style:italic}
+.upload-row{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+.file-label{display:inline-flex;align-items:center;gap:8px}
+input[type=file]{display:none}
+.memory-note{text-align:center;color:#9c7182;font:12px Arial,sans-serif;margin-top:12px}
+.counter-card{text-align:center;background:linear-gradient(145deg,#fff,#fff3f7);border:1px solid white;border-radius:25px;padding:30px 20px;box-shadow:0 15px 40px #a95d791a}
+.counter-number{font-size:clamp(42px,9vw,68px);color:var(--deep);line-height:1.2}
+.counter-label{letter-spacing:.2em;text-transform:uppercase;font:11px Arial,sans-serif;color:#b16b86;margin-top:8px}
+.counter-sub{margin-top:14px;color:#93677a;font-size:15px}
+.date-control{margin-top:20px;display:flex;justify-content:center;gap:9px;flex-wrap:wrap;align-items:center}
+.date-control input{border:1px solid var(--line);background:white;border-radius:12px;padding:11px;color:var(--ink)}
+.music-card{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 25px;border-radius:22px;background:#fff9fb;border:1px solid white;box-shadow:0 12px 32px #a95d7918}
+.music-info{display:flex;align-items:center;gap:15px}
+.disc{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#d77d9d,#a74770);color:white;font-size:22px;animation:spin 8s linear infinite;animation-play-state:paused}
+.disc.playing{animation-play-state:running}
+@keyframes spin{to{transform:rotate(360deg)}}
+.music-info b{display:block;color:var(--deep);font-weight:normal;font-size:17px}.music-info small{display:block;color:#a17a8b;margin-top:5px;font:12px Arial,sans-serif}
+footer{text-align:center;padding:45px 15px 55px;color:#a16b80;font-size:14px;line-height:1.8}
+footer .big{font-size:28px}
+.modal{position:fixed;inset:0;background:#54283d99;display:none;place-items:center;padding:20px;z-index:5}
+.modal.open{display:grid}
+.modal-box{width:min(450px,100%);background:#fff9fb;border-radius:24px;padding:30px;text-align:center;box-shadow:0 25px 80px #421b2e55}
+.modal-box h3{font-weight:normal;font-size:28px;color:var(--deep);margin:5px 0 12px}
+.modal-box p{line-height:1.8;color:#80576a}
+.close{margin-top:15px}
+@media(max-width:650px){nav{padding:17px 0}.hero{min-height:75vh;padding-top:35px}.gallery-grid{grid-template-columns:1fr 1fr}.photo-card img,.photo-card .placeholder{height:180px}.gallery-grid .photo-card:last-child{grid-column:1/-1}.gallery-grid .photo-card:last-child img,.gallery-grid .photo-card:last-child .placeholder{height:210px}.music-card{align-items:flex-start;flex-direction:column}.music-card .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="petals" aria-hidden="true"></div>
+<div class="wrap">
+<nav><div class="brand">A LITTLE LOVE LETTER</div><div class="nav-heart">♡</div></nav>
+
+<header class="hero">
+  <div>
+    <div class="heart-mark">♡</div>
+    <div class="eyebrow">A special day for someone special</div>
+    <h1>Happy Birthday,<br><em>Lidia</em></h1>
+    <p>Untuk Lidia Theresia Siregar — seseorang yang kehadirannya membuat hari-hari biasa terasa lebih istimewa.</p>
+    <button class="btn" onclick="document.getElementById('surat').scrollIntoView({behavior:'smooth'})">Ada surat untukmu ↓</button>
+  </div>
+</header>
+
+<main>
+<section id="surat">
+  <div class="section-head"><div class="eyebrow">Words from my heart</div><h2>Sebuah surat kecil untukmu</h2><p>Ada beberapa hal yang ingin kusampaikan, Sayang.</p></div>
+  <div class="paper">
+    <div class="letter-top">୨୧ ♡ ୨୧</div>
+    <div id="letterTeaser" class="letter-body">Untuk kamu, <strong>Lidia Theresia Siregar</strong>,
+
+Di hari istimewamu ini, aku ingin kamu tahu bahwa kehadiranmu adalah salah satu hal indah yang kusyukuri.
+
+Ada surat kecil yang kutulis khusus untukmu. Buka perlahan, ya...</div>
+    <div id="letterFull" class="reveal">
+      <div class="letter-body">Selamat ulang tahun, <strong>Sayang.</strong> ♡
+
+Hari ini adalah hari ketika seseorang yang begitu berarti bagiku dilahirkan. Aku mungkin tidak selalu pandai merangkai kata, tetapi aku sungguh bersyukur karena Tuhan mengizinkan kita saling mengenal dan berbagi cerita.
+
+Terima kasih sudah hadir dengan segala warna dirimu. Terima kasih untuk tawa, perhatian, obrolan sederhana, dan setiap kenangan yang telah kita kumpulkan. Bahkan hal-hal kecil bersamamu bisa menjadi sesuatu yang ingin kuingat lama.
+
+Aku tahu perjalanan kita tidak harus selalu sempurna. Akan ada hari yang mudah, juga hari yang menuntut kita untuk lebih sabar dan saling memahami. Namun, aku berharap kita tidak berhenti belajar untuk mendengarkan, menghargai, dan menjaga satu sama lain.
+
+Di usia barumu, doaku sederhana: semoga Tuhan selalu menjaga langkahmu, memberi kesehatan, hati yang kuat, damai dalam setiap musim kehidupan, dan keberanian untuk mengejar semua impianmu. Semoga hal-hal baik menemukan jalannya kepadamu.
+
+Jangan terlalu keras pada dirimu sendiri, ya. Kamu bertumbuh, kamu berproses, dan kamu layak merayakan setiap langkah kecilmu.
+
+<strong>Selamat bertambah usia, Sayang.</strong> Teruslah menjadi Lidia yang hangat, kuat, dan istimewa. Terima kasih sudah menjadi bagian dari ceritaku. Aku berharap masih ada banyak halaman indah yang bisa kita tulis bersama.
+
+Dengan segala doa dan kasih yang tulus. ♡</div>
+      <div class="signature">Dengan sayang,<br>orang yang selalu mendoakanmu ♡</div>
+    </div>
+    <div class="letter-actions"><button class="btn" id="letterBtn" onclick="revealLetter()">Buka surat lengkap ♡</button></div>
+  </div>
+</section>
+
+<section id="kenangan">
+  <div class="section-head"><div class="eyebrow">Little moments, big memories</div><h2>Potongan cerita kita</h2><p>Tambahkan foto-foto yang paling ingin kamu kenang di sini.</p></div>
+  <div class="gallery-grid" id="gallery">
+    <div class="photo-card"><div class="placeholder">♡<br>Kenangan pertama<br><small>Foto kalian di sini</small></div><small>Our beginning</small></div>
+    <div class="photo-card"><div class="placeholder">🌷<br>Senyum kesukaan</div><small>Your lovely smile</small></div>
+    <div class="photo-card"><div class="placeholder">✨<br>Momen sederhana</div><small>Little happiness</small></div>
+  </div>
+  <div class="upload-row">
+    <label class="btn secondary file-label">＋ Tambahkan foto<input id="photoUpload" type="file" accept="image/*" multiple></label>
+  </div>
+  <div class="memory-note">Foto yang dipilih tampil di browser perangkat ini saja; tidak diunggah ke internet.</div>
+</section>
+
+<section id="waktu">
+  <div class="section-head"><div class="eyebrow">Every moment matters</div><h2>Perjalanan yang kita syukuri</h2><p>Waktu yang telah berlalu sejak hari istimewa kalian dimulai.</p></div>
+  <div class="counter-card">
+    <div class="counter-number" id="days">—</div>
+    <div class="counter-label">hari penuh cerita</div>
+    <div class="counter-sub" id="sinceText">Atur tanggal mulai hubungan kalian untuk menghitungnya ♡</div>
+    <div class="date-control">
+      <label for="startDate">Tanggal jadian:</label>
+      <input type="date" id="startDate">
+      <button class="btn" onclick="saveDate()">Simpan ♡</button>
+    </div>
+  </div>
+</section>
+
+<section id="musik">
+  <div class="section-head"><div class="eyebrow">A little melody</div><h2>Putar lagu kenangan</h2><p>Musik pilihanmu bisa menemani saat dia membaca surat ini.</p></div>
+  <div class="music-card">
+    <div class="music-info"><div class="disc" id="disc">♫</div><div><b>Our little soundtrack</b><small id="musicStatus">Pilih file musik dari perangkatmu</small></div></div>
+    <div class="upload-row" style="margin:0">
+      <label class="btn secondary file-label">Pilih musik<input id="musicUpload" type="file" accept="audio/*"></label>
+      <button class="btn" id="playBtn" onclick="toggleMusic()" disabled>▶ Putar</button>
+    </div>
+  </div>
+  <audio id="audio" loop></audio>
+</section>
+</main>
+
+<footer>
+  <div class="big">♡</div>
+  Dibuat dengan sepenuh hati untuk<br><strong>Lidia Theresia Siregar</strong><br>
+  <span style="font-size:12px">May your days be filled with love, grace, and beautiful surprises.</span>
+</footer>
+</div>
+
+<div class="modal" id="finalModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="modal-box"><div style="font-size:38px">💗</div><h3 id="modalTitle">Satu hal lagi, Sayang...</h3><p>Kalau suatu hari kamu lupa betapa berharganya dirimu, semoga halaman kecil ini mengingatkanmu: kamu pantas disayangi, didoakan, dan dirayakan.</p><p><strong>Selamat ulang tahun, Lidia. ♡</strong></p><button class="btn close" onclick="closeModal()">Peluk jauh! ♡</button></div>
+</div>
+
+<script>
+const petals = document.getElementById('petals');
+const symbols = ['♡','✿','♥','❀'];
+function makePetal(){
+  const el=document.createElement('span');
+  el.className='petal';
+  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=Math.random()*100+'vw';
+  el.style.fontSize=(12+Math.random()*18)+'px';
+  el.style.color=['#d77d9d','#e7a9bd','#c65d83'][Math.floor(Math.random()*3)];
+  el.style.setProperty('--drift',(Math.random()*150-75)+'px');
+  el.style.animationDuration=(8+Math.random()*8)+'s';
+  petals.appendChild(el);
+  setTimeout(()=>el.remove(),17000);
+}
+for(let i=0;i<14;i++)setTimeout(makePetal,i*400);
+setInterval(makePetal,850);
+
+function revealLetter(){
+  document.getElementById('letterFull').classList.add('show');
+  document.getElementById('letterTeaser').style.display='none';
+  document.getElementById('letterBtn').textContent='Surat terbuka ♡';
+  document.getElementById('letterBtn').disabled=true;
+  setTimeout(()=>document.getElementById('finalModal').classList.add('open'),1800);
+}
+function closeModal(){document.getElementById('finalModal').classList.remove('open')}
+
+const startDate=document.getElementById('startDate');
+function updateCounter(value){
+  if(!value){document.getElementById('days').textContent='♡';document.getElementById('sinceText').textContent='Atur tanggal mulai hubungan kalian untuk menghitungnya ♡';return}
+  const start=new Date(value+'T00:00:00');
+  const now=new Date();now.setHours(0,0,0,0);
+  const diff=Math.floor((now-start)/86400000);
+  if(Number.isNaN(diff)||diff<0){document.getElementById('days').textContent='—';document.getElementById('sinceText').textContent='Tanggal mulai harus hari ini atau sebelumnya.';return}
+  document.getElementById('days').textContent=diff.toLocaleString('id-ID');
+  document.getElementById('sinceText').textContent='Sejak '+start.toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'})+'. Terima kasih untuk setiap harinya.';
+}
+function saveDate(){
+  const v=startDate.value;
+  if(!v){alert('Pilih tanggal jadian terlebih dahulu, ya.');return}
+  localStorage.setItem('lidiaRelationshipStart',v);updateCounter(v);
+}
+const savedDate=localStorage.getItem('lidiaRelationshipStart');
+if(savedDate){startDate.value=savedDate;updateCounter(savedDate)}else updateCounter('');
+
+document.getElementById('photoUpload').addEventListener('change',e=>{
+  const files=[...e.target.files].slice(0,12);
+  if(!files.length)return;
+  const gallery=document.getElementById('gallery');gallery.innerHTML='';
+  files.forEach((file,i)=>{
+    if(!file.type.startsWith('image/'))return;
+    const card=document.createElement('div');card.className='photo-card';
+    const img=document.createElement('img');img.alt='Kenangan '+(i+1);img.src=URL.createObjectURL(file);
+    const caption=document.createElement('small');caption.textContent=['A favorite memory','A little happiness','Forever remembered'][i%3];
+    card.append(img,caption);gallery.appendChild(card);
+  });
+});
+
+const audio=document.getElementById('audio'),playBtn=document.getElementById('playBtn'),disc=document.getElementById('disc');
+document.getElementById('musicUpload').addEventListener('change',e=>{
+  const file=e.target.files[0];if(!file)return;
+  audio.src=URL.createObjectURL(file);audio.load();playBtn.disabled=false;
+  document.getElementById('musicStatus').textContent=file.name;
+  playBtn.textContent='▶ Putar';
+});
+async function toggleMusic(){
+  if(audio.paused){
+    try{await audio.play();playBtn.textContent='Ⅱ Jeda';disc.classList.add('playing')}
+    catch(err){document.getElementById('musicStatus').textContent='Browser tidak dapat memutar file ini.'}
+  }else{audio.pause();playBtn.textContent='▶ Putar';disc.classList.remove('playing')}
+}
+audio.addEventListener('ended',()=>{playBtn.textContent='▶ Putar';disc.classList.remove('playing')});
+</script>
+</body>
+</html>
